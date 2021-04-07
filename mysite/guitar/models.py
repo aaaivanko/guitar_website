@@ -3,12 +3,12 @@ from django.db import models
 
 class Chord(models.Model):
     EASY = 'EASY'
-    HARD = 'HARD'
     MEDIUM = 'MEDIUM'
+    HARD = 'HARD'
     CHORD_LEVEL = [
         (EASY, 'Easy'),
-        (HARD, 'Hard'),
-        (MEDIUM, 'Medium')
+        (MEDIUM, 'Medium'),
+        (HARD, 'Hard')
     ]
     level = models.CharField(max_length=6, choices=CHORD_LEVEL)
     name = models.CharField(max_length=15)

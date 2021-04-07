@@ -1,5 +1,6 @@
 {% extends 'guitar/base.html' %}
 {% block content %}
+    <h1>Chords</h1>
     {% for chord in chords %}
         <h1>{{ chord.name }}</h1>
         <img src="{{ chord.chord_image.url }}" >
