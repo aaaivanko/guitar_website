@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Chord
 
 
 def home(request):
@@ -10,7 +11,11 @@ def songs(request):
 
 
 def chords(request):
-    return render(request, 'guitar/chords.html')
+    context = {
+        'title': 'GUITAR CHORDS',
+        'chords': Chord.objects.all()
+    }
+    return render(request, 'guitar/chords.html', context)
 
 
 def contact(request):
