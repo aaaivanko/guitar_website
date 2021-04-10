@@ -1,7 +1,10 @@
 {% extends 'guitar/base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
-    <h1>Register Page</h1>
+    <br>
+    <center>
+        <h1>Register Page</h1>
+    </center>
     <div>
         <form method="post">{% csrf_token %}
             {{ form|crispy }}

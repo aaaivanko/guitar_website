@@ -1,8 +1,19 @@
 {% extends 'guitar/base.html' %}
+{% load static %}
 {% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'user/css/profile.css' %}">
+    <br>
+    <center>
     <h1>Profile page</h1>
-
-    <h1>Name: {{ user.username }}</h1>
-
-    <p>email: {{ user.email }}</p>
+        <br>
+        <img src="{{ user.profile.image.url }}" width="200" height="200" >
+    </center>
+    <br> <br> <br>
+    <center>
+    <h1 style="margin: left 30px;">Name: {{ user.username }}</h1>
+        <br>
+    <h3>Guitar model: {{ user.profile.guitar_model }}</h3>
+        <br>
+    <h3>Email: {{ user.email }}</h3>
+    </center>
 {% endblock content %}
