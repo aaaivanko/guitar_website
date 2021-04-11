@@ -40,9 +40,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'user.apps.UserConfig',
-    'guitar.apps.GuitarConfig',
     'django.contrib.admin',
+    'guitar.apps.GuitarConfig',
+    'user.apps.UserConfig',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -138,6 +138,11 @@ LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = 'guitar:home'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+    '/var/www/static/',
+]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
