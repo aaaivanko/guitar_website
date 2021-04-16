@@ -4,6 +4,10 @@ from .forms import Contact
 from django.core.mail import send_mail
 from django.contrib import messages
 
+from datetime import datetime
+import calendar
+from calendar import HTMLCalendar
+
 
 def home(request):
     return render(request, 'guitar/home.html')

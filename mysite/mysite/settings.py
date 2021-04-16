@@ -135,7 +135,7 @@ MEDIA_URL = '/media/'
 
 LOGIN_URL = '/login/'
 
-LOGIN_REDIRECT_URL = 'guitar:home'
+LOGIN_REDIRECT_URL = 'user:profile'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 

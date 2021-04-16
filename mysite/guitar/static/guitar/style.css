@@ -3,6 +3,11 @@
     padding: 0px;
 }
 
+.wrapper {
+    margin: 0 auto;
+    width: 1000px;
+}
+
 /* The alert message box */
 .alert {
   padding: 20px;

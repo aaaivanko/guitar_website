@@ -1,13 +1,28 @@
 {% extends 'guitar/base.html' %}
+{% load static %}
 {% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'guitar/css/chords.css' %}">
     <br>
     <center>
-        <h1>Chords</h1>
+        <h1 class="more">Chords</h1>
     </center>
     {% for chord in chords %}
-        <div style="width: 33%; float: left">
-            <h1>{{ chord.name }}</h1>
-            <img src="{{ chord.chord_image.url }}" >
+        <div class="row">
+            <div class="column">
+                <div class="item">
+                    <span class="caption">{{ chord.name }}</span>
+                    <img src="{{ chord.chord_image.url }}" >
+                </div>
+                <div class="item">
+                    <span class="caption">{{ chord.name }}</span>
+                    <img src="{{ chord.chord_image.url }}" >
+                </div>
+                <div class="item">
+                    <span class="caption">{{ chord.name }}</span>
+                    <img src="{{ chord.chord_image.url }}" >
+                </div>
+            </div>
         </div>
-    {% endfor %}
+
+
 {% endblock content %}

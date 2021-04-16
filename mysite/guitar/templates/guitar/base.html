@@ -11,27 +11,27 @@
     {% endif %}
 </head>
 <body>
-
-    <nav>
-        <ul>
-            <div class="float-left">
-                <li><a href="{% url 'guitar:home' %}">Home</a></li>
-                <li><a href="{% url 'guitar:songs' %}">Songs</a></li>
-                <li><a href="{% url 'guitar:chords' %}">Chords</a></li>
-                <li><a href="{% url 'guitar:contact' %}">Contact</a></li>
-                {% if user.is_authenticated %}
-                    <li><a href="{% url 'user:profile' %}">Profile</a></li>
-                    <li><a href="{% url 'logout' %}">Logout</a></li>
+        <nav>
+            <div class="wrapper">
+                <ul>
+                    <div class="float-left">
+                        <li><a href="{% url 'guitar:home' %}">Home</a></li>
+                        <li><a href="{% url 'guitar:songs' %}">Songs</a></li>
+                        <li><a href="{% url 'guitar:chords' %}">Chords</a></li>
+                        <li><a href="{% url 'guitar:contact' %}">Contact</a></li>
+                        {% if user.is_authenticated %}
+                            <li><a href="{% url 'user:profile' %}">Profile</a></li>
+                            <li><a href="{% url 'logout' %}">Logout</a></li>
+                    </div>
+                    <div class="float-right">
+                        {% else %}
+                            <li><a href="{% url 'login' %}">Login</a></li>
+                            <li><a href="{% url 'user:register' %}">Register</a></li>
+                    </div>
+                        {% endif %}
+                </ul>
             </div>
-            <div class="float-right">
-                {% else %}
-                    <li><a href="{% url 'login' %}">Login</a></li>
-                    <li><a href="{% url 'user:register' %}">Register</a></li>
-            </div>
-                {% endif %}
-        </ul>
-    </nav>
-
+        </nav>
     {% if messages %}
         {% for message in messages %}
             <div class="alert">
