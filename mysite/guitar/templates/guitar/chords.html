@@ -7,22 +7,21 @@
         <h1 class="more">Chords</h1>
     </center>
     {% for chord in chords %}
+
         <div class="row">
             <div class="column">
                 <div class="item">
                     <span class="caption">{{ chord.name }}</span>
                     <img src="{{ chord.chord_image.url }}" >
+                    <span class="caption">{{ chord.level }}</span>
                 </div>
                 <div class="item">
                     <span class="caption">{{ chord.name }}</span>
                     <img src="{{ chord.chord_image.url }}" >
                 </div>
-                <div class="item">
-                    <span class="caption">{{ chord.name }}</span>
-                    <img src="{{ chord.chord_image.url }}" >
-                </div>
+
             </div>
         </div>
-
+    {% endfor %}
 
 {% endblock content %}
