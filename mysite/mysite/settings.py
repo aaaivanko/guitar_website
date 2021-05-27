@@ -31,8 +31,8 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
-EMAIL_HOST_USER = 'ivan.chvartatskyy@gmail.com'
-EMAIL_HOST_PASSWORD = '6526256vana6526256vana'
+EMAIL_HOST_USER = 'your data'
+EMAIL_HOST_PASSWORD = 'your data'
 
 ALLOWED_HOSTS = []
 
